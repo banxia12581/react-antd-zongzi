@@ -1,0 +1,53 @@
+.flower {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-3deg);
+  &-leaf {
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    border-radius: 51% 49% 47% 53%;
+    background-color: #a7ffee;
+    background-image: linear-gradient(to top, #ffeded 15%, #ff8fa7 100%);
+  }
+  &-leaf1 {
+    top: 2px;
+    left: 2px;
+    transform: rotate(-3deg);
+    z-index: 999;
+  }
+  &-leaf2 {
+    top: 5px;
+    left: 7px;
+    transform: rotate(60deg);
+    z-index: 998;
+  }
+  &-leaf3 {
+    top: 10px;
+    left: 6px;
+    transform: rotate(160deg);
+    z-index: 997;
+  }
+  &-leaf4 {
+    top: 11px;
+    left: 0px;
+    transform: rotate(200deg);
+    z-index: 996;
+  }
+  &-leaf5 {
+    top: 6px;
+    left: -2px;
+    transform: rotate(-75deg);
+    z-index: 995;
+  }
+  &-circle {
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff3b4;
+    border: 1px solid #fff;
+  }
+}

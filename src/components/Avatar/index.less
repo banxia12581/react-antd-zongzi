@@ -1,0 +1,110 @@
+.avatar {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  &-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 99;
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+    border: 3px solid #c03e34;
+  }
+  &-nickname {
+    height: 24px;
+    line-height: 24px;
+    background: #ff8fa7;
+    border-radius: 24px;
+    position: absolute;
+    left: 60px;
+    top: 35px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    z-index: 89;
+    border:1px solid #fff;
+    padding: 0 10px 0 25px;
+  }
+  &-designation {
+    width: 110px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    z-index: 89;
+    text-align: center;
+    padding-left: 10px;
+    border-radius: 28px 0 0 0;
+    background-color: #f0ecfc;
+    background-image: linear-gradient(315deg,#ffeded 0,#fed6d6 74%);
+    span {
+      font-size: 18px;
+      color: #fff;
+      text-shadow:  1px 1px #ffb53a,-1px -1px #ffb53a,1px -1px #ffb53a,-1px 1px #ffb53a;
+    }
+    
+  }
+  &-flower {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    transform: rotate(-30deg) scale(0.8);
+    &-leaf {
+      position: absolute;
+      border-radius: 51% 49% 47% 53%;
+      background-color: #a7ffee;
+      background-image: linear-gradient(to top, #ffeded 15%, #ff8fa7 100%);
+      transform-origin: bottom center;
+      opacity: 0.9;
+      box-shadow: inset 0 0 6px #fed6d6;
+    }
+    &-leaf1 {
+      width: 28px;
+      height: 34px;
+      bottom: -10px;
+      left: -14px;
+      transform: translate(-10%, 1%) rotateY(40deg) rotateX(-50deg);
+    }
+    &-leaf2 {
+      width: 23px;
+      height: 32px;
+      bottom: -4px;
+      left: -5px;
+      transform: translate(-50%, -4%) rotateX(40deg);
+    }
+    &-leaf3 {
+      width: 28px;
+      height: 30px;
+      bottom: -3px;
+      left: 0px;
+      transform: translate(-90%, 0%) rotateY(45deg) rotateX(50deg);
+    }
+    &-leaf4 {
+      width: 28px;
+      height: 24px;
+      bottom: -5px;
+      left: 6px;
+      transform: translate(-61%, -19%) rotateX(67deg) rotate(193deg);
+    }
+    &-leaf5 {
+      width: 28px;
+      height: 25px;
+      bottom: -5px;
+      left: -4px;
+      transform: translate(-55%, -20%) rotateX(71deg) rotate(211deg);
+    }
+    &-circle {
+      position: absolute;
+      left: -12px;
+      top: -10px;
+      width: 16px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #fdfd8e;
+    }
+  }
+}

@@ -1,0 +1,649 @@
+.flowertree {
+  width: 60px;
+  height: 200px;
+  transform:  scale(1.1);
+  .trunk {
+    width: 58%;
+    height: 30%;
+    background-color: #df916a;
+    border-left: 0.09em solid black;
+    border-right: 0.09em solid black;
+    box-shadow: inset 0 30px 10px #a64f24;
+  }
+  .trunk:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 40px;
+    z-index: -2;
+    right: 15px;
+    border-radius: 100%;
+  }
+  .trunk .roots {
+    position: relative;
+    z-index: -1;
+    top: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    height: auto;
+    left: -5%;
+  }
+  .trunk .roots .root {
+    flex: 1 1 0;
+    background-color: #dd8b62;
+    height: 15px;
+    margin: 0 -1px;
+    border-radius: 10px;
+  }
+  .trunk .roots .root:nth-child(1) {
+    transform: rotate(30deg);
+  }
+  .trunk .roots .root:nth-child(2) {
+    transform: rotate(15deg);
+  }
+  .trunk .roots .root:nth-child(3) {
+    transform: rotate(0deg);
+  }
+  .trunk .roots .root:nth-child(4) {
+    transform: rotate(-15deg);
+  }
+  .trunk .roots .root:nth-child(5) {
+    transform: rotate(-30deg);
+  }
+  .trunk .roots .root:first-child {
+    box-shadow: -1px 1px #d0632d, -0.1em 1px black;
+  }
+  .trunk .roots .root:nth-child(n + 2):nth-child(-n + 4) {
+    box-shadow: 0 1px #d0632d, 0em 1px black;
+  }
+  .trunk .roots .root:last-child {
+    box-shadow: 1px 1px #d0632d, 0.1em 1px black;
+  }
+  .leaves,
+  .cherry-blossoms {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: -120px;
+    left: -12px;
+    background-color: #4cbda4;
+    border-radius: 100%;
+    box-shadow: inset 4px -10px #41af97;
+    border: 1px solid #3a9c87;
+    border: 0.1em solid black;
+  }
+  .leaves:before,
+  .cherry-blossoms:before,
+  .leaves:after,
+  .cherry-blossoms:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #4cbda4;
+    border-radius: 100%;
+    top: 35px;
+    border: 1px solid #3a9c87;
+    border: 0.1em solid black;
+    border-top: 0;
+    border-bottom: 2px solid #91451f;
+    box-shadow: inset 4px -10px #41af97;
+  }
+  .leaves:before,
+  .cherry-blossoms:before {
+    left: -20px;
+  }
+  .leaves:after,
+  .cherry-blossoms:after {
+    left: 20px;
+  }
+  .leaves .leaf,
+  .cherry-blossoms .leaf {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background-color: #4cbda4;
+    background-image: linear-gradient(to bottom, #097465, transparent);
+    border-radius: 10% 80%;
+    border-bottom: 1px solid #2c7766;
+    border-right: 1px solid #2c7766;
+    transform: scale(0.5);
+  }
+  .leaves .leaf:before,
+  .cherry-blossoms .leaf:before,
+  .leaves .leaf:after,
+  .cherry-blossoms .leaf:after {
+    content: '';
+    position: absolute;
+    background-color: #4cbda4;
+    background-image: linear-gradient(to bottom, #008b79, transparent);
+    width: 7px;
+    height: 12px;
+    border-radius: 10% 80%;
+    border-right: 1px solid #338a76;
+  }
+  .leaves .leaf:before,
+  .cherry-blossoms .leaf:before {
+    left: -3px;
+    transform: rotate(40deg);
+    border-left: 1px solid #338a76;
+  }
+  .leaves .leaf:after,
+  .cherry-blossoms .leaf:after {
+    left: 4px;
+    top: -2px;
+    transform: rotate(-40deg);
+    border-bottom: 1px solid #338a76;
+  }
+  .leaves .leaf:nth-child(1),
+  .cherry-blossoms .leaf:nth-child(1) {
+    top: 85px;
+    transform: scale(0.8) rotate(-25deg);
+  }
+  .leaves .leaf:nth-child(2),
+  .cherry-blossoms .leaf:nth-child(2) {
+    top: 80px;
+    left: -15px;
+  }
+  .leaves .leaf:nth-child(3),
+  .cherry-blossoms .leaf:nth-child(3) {
+    top: 85px;
+    left: 15px;
+    transform: scale(1.1) rotate(-25deg);
+  }
+  .leaves .leaf:nth-child(4),
+  .cherry-blossoms .leaf:nth-child(4) {
+    top: 80px;
+    left: 25px;
+    z-index: 3;
+  }
+  .leaves .leaf:nth-child(5),
+  .cherry-blossoms .leaf:nth-child(5) {
+    top: 85px;
+    left: 60px;
+    z-index: 2;
+    transform: scale(0.9) rotate(70deg);
+  }
+  .leaves .leaf:nth-child(6),
+  .cherry-blossoms .leaf:nth-child(6) {
+    top: 80px;
+    left: 45px;
+    z-index: 2;
+    transform: scale(1.2) rotate(50deg);
+  }
+  .leaves .leaf:nth-child(7),
+  .cherry-blossoms .leaf:nth-child(7) {
+    top: 72px;
+    left: -20px;
+  }
+  .leaves .leaf:nth-child(8),
+  .cherry-blossoms .leaf:nth-child(8) {
+    top: 75px;
+    left: -1px;
+    transform: scale(1.02) rotate(-25deg);
+  }
+  .leaves .leaf:nth-child(9),
+  .cherry-blossoms .leaf:nth-child(9) {
+    top: 70px;
+    left: 10px;
+  }
+  .leaves .leaf:nth-child(10),
+  .cherry-blossoms .leaf:nth-child(10) {
+    top: 55px;
+    left: -20px;
+    transform: scale(1.5) rotate(18deg);
+  }
+  .leaves .leaf:nth-child(11),
+  .cherry-blossoms .leaf:nth-child(11) {
+    top: 60px;
+    transform: scale(0.9);
+    left: -5px;
+  }
+  .leaves .leaf:nth-child(12),
+  .cherry-blossoms .leaf:nth-child(12) {
+    z-index: 2;
+    left: 28px;
+    top: 60px;
+  }
+  .leaves .leaf:nth-child(13),
+  .cherry-blossoms .leaf:nth-child(13) {
+    z-index: 2;
+    left: 40px;
+    top: 70px;
+    transform: rotate(40deg);
+  }
+  .leaves .leaf:nth-child(14),
+  .cherry-blossoms .leaf:nth-child(14) {
+    z-index: 2;
+    left: 55px;
+    top: 70px;
+    transform: rotate(60deg) scale(1.3);
+  }
+  .leaves .leaf:nth-child(15),
+  .cherry-blossoms .leaf:nth-child(15) {
+    z-index: 2;
+    left: 25px;
+    top: 70px;
+    transform: rotate(-20deg) scale(1.1);
+  }
+  .leaves .leaf:nth-child(16),
+  .cherry-blossoms .leaf:nth-child(16) {
+    z-index: 2;
+    left: 70px;
+    top: 70px;
+    transform: rotate(50deg) scale(0.7);
+  }
+  .leaves .leaf:nth-child(17),
+  .cherry-blossoms .leaf:nth-child(17) {
+    z-index: 2;
+    left: 70px;
+    top: 60px;
+    transform: scale(0.6) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(18),
+  .cherry-blossoms .leaf:nth-child(18) {
+    z-index: 2;
+    left: 50px;
+    top: 60px;
+    transform: scale(0.7) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(19),
+  .cherry-blossoms .leaf:nth-child(19) {
+    z-index: 2;
+    left: 65px;
+    top: 48px;
+    transform: scale(1.5) rotate(50deg);
+  }
+  .leaves .leaf:nth-child(20),
+  .cherry-blossoms .leaf:nth-child(20) {
+    z-index: 2;
+    left: 40px;
+    top: 50px;
+    transform: scale(0.8) rotate(70deg);
+  }
+  .leaves .leaf:nth-child(21),
+  .cherry-blossoms .leaf:nth-child(21) {
+    z-index: 2;
+    left: 58px;
+    top: 35px;
+    transform: scale(0.7) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(22),
+  .cherry-blossoms .leaf:nth-child(22) {
+    z-index: 2;
+    left: 20px;
+    top: 55px;
+    transform: scale(1) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(23),
+  .cherry-blossoms .leaf:nth-child(23) {
+    z-index: 2;
+    left: 40px;
+    top: 60px;
+    transform: scale(0.4) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(24),
+  .cherry-blossoms .leaf:nth-child(24) {
+    z-index: 2;
+    left: 10px;
+    top: 60px;
+    transform: scale(0.6) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(25),
+  .cherry-blossoms .leaf:nth-child(25) {
+    left: -12px;
+    top: 38px;
+    transform: scale(1) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(26),
+  .cherry-blossoms .leaf:nth-child(26) {
+    left: -5px;
+    top: 45px;
+    transform: scale(0.8) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(27),
+  .cherry-blossoms .leaf:nth-child(27) {
+    left: 8px;
+    top: 52px;
+    transform: scale(1) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(28),
+  .cherry-blossoms .leaf:nth-child(28) {
+    z-index: 2;
+    left: 50px;
+    top: 52px;
+    transform: scale(1) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(29),
+  .cherry-blossoms .leaf:nth-child(29) {
+    left: 48px;
+    top: 10px;
+    transform: scale(1) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(30),
+  .cherry-blossoms .leaf:nth-child(30) {
+    left: 30px;
+    top: -5px;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(31),
+  .cherry-blossoms .leaf:nth-child(31) {
+    left: 20px;
+    top: -5px;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(32),
+  .cherry-blossoms .leaf:nth-child(32) {
+    left: 40px;
+    top: -3px;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(33),
+  .cherry-blossoms .leaf:nth-child(33) {
+    left: 10px;
+    top: 10px;
+    transform: scale(0.7) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(34),
+  .cherry-blossoms .leaf:nth-child(34) {
+    left: 0;
+    top: 25px;
+    transform: scale(1) rotate(-10deg);
+  }
+  .leaves .leaf:nth-child(35),
+  .cherry-blossoms .leaf:nth-child(35) {
+    left: 20px;
+    top: 30px;
+    transform: scale(1.2) rotate(0deg);
+  }
+  .leaves .leaf:nth-child(36),
+  .cherry-blossoms .leaf:nth-child(36) {
+    left: 50px;
+    top: 30px;
+    transform: scale(1.2) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(37),
+  .cherry-blossoms .leaf:nth-child(37) {
+    left: 50px;
+    top: 30px;
+    transform: scale(1.2) rotate(60deg);
+  }
+  .leaves .leaf:nth-child(38),
+  .cherry-blossoms .leaf:nth-child(38) {
+    left: 50px;
+    top: 20px;
+    transform: scale(1) rotate(40deg);
+  }
+  .leaves .leaf:nth-child(39),
+  .cherry-blossoms .leaf:nth-child(39) {
+    left: 40px;
+    top: 23px;
+    transform: scale(0.8) rotate(50deg);
+  }
+  .leaves .leaf:nth-child(40),
+  .cherry-blossoms .leaf:nth-child(40) {
+    left: 30px;
+    top: 20px;
+    transform: scale(0.5) rotate(-20deg);
+  }
+  .leaves .leaf:nth-child(40),
+  .cherry-blossoms .leaf:nth-child(40) {
+    left: 30px;
+    top: 10px;
+    transform: scale(1.5) rotate(-20deg);
+  }
+  .leaves .leaf:nth-child(41),
+  .cherry-blossoms .leaf:nth-child(41) {
+    left: 1px;
+    top: 15px;
+    transform: scale(0.9) rotate(-5deg);
+  }
+  .leaves .leaf:nth-child(42),
+  .cherry-blossoms .leaf:nth-child(42) {
+    left: 10px;
+    top: 18px;
+    transform: scale(0.5) rotate(5deg);
+  }
+  .leaves .leaf:nth-child(44),
+  .cherry-blossoms .leaf:nth-child(44) {
+    left: 5px;
+    top: 35px;
+    transform: scale(1.5) rotate(-5deg);
+  }
+  .leaves .leaf:nth-child(45),
+  .cherry-blossoms .leaf:nth-child(45) {
+    z-index: 2;
+    left: 38px;
+    top: 35px;
+    transform: scale(1.8) rotate(70deg);
+  }
+  .leaves .leaf:nth-child(46),
+  .cherry-blossoms .leaf:nth-child(46) {
+    left: 10px;
+    top: 5px;
+    transform: scale(1.3) rotate(70deg);
+  }
+  .cherry-blossoms {
+    background-color: #ffd9df;
+    border: 0.05em solid black;
+    box-shadow: none;
+  }
+  .cherry-blossoms:before,
+  .cherry-blossoms:after {
+    background-color: #ffd9df;
+    border: 0.05em solid black;
+    border-top: 0;
+    box-shadow: none;
+  }
+  .cherry-blossoms:after {
+    border-left: none;
+  }
+  .cherry-blossoms .cherry-blossom {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+  .cherry-blossoms .cherry-blossom .petal {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd9df;
+    background-image: linear-gradient(-45deg, #ec87bf 10%, #ffd9df 65%);
+    border-radius: 20% 80%;
+    box-shadow: -0.04em -0.04em #ec87bf, -0.05em -0.05em black;
+  }
+  .cherry-blossoms .cherry-blossom .petal:nth-child(1) {
+    transform: rotate(40deg);
+    left: 25%;
+    top: 2px;
+  }
+  .cherry-blossoms .cherry-blossom .petal:nth-child(2) {
+    transform: rotate(-20deg);
+    top: 6px;
+    left: 0;
+  }
+  .cherry-blossoms .cherry-blossom .petal:nth-child(3) {
+    transform: rotate(-90deg);
+    top: 12px;
+    left: 2px;
+  }
+  .cherry-blossoms .cherry-blossom .petal:nth-child(4) {
+    transform: rotate(180deg);
+    top: 12px;
+    left: 10px;
+  }
+  .cherry-blossoms .cherry-blossom .petal:nth-child(5) {
+    transform: rotate(100deg);
+    top: 5px;
+    left: 10px;
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(1) {
+    z-index: 2;
+    left: 30px;
+    transform: rotate(10deg) scale(0.8);
+    top: 70px;
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(2) {
+    z-index: 2;
+    left: 50px;
+    transform: rotate(20deg) scale(0.4);
+    top: 65px;
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(3) {
+    z-index: 2;
+    left: 45px;
+    top: 75px;
+    transform: scale(0.6);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(4) {
+    z-index: 2;
+    left: 45px;
+    top: 50px;
+    transform: scale(1);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(5) {
+    z-index: 2;
+    left: 58px;
+    top: 70px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(6) {
+    z-index: 2;
+    left: 62px;
+    top: 55px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(7) {
+    z-index: 2;
+    left: 55px;
+    top: 35px;
+    transform: scale(0.8);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(8) {
+    z-index: 2;
+    left: 30px;
+    top: 55px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(9) {
+    z-index: 2;
+    left: 30px;
+    top: 30px;
+    transform: scale(1.1);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(10) {
+    z-index: 2;
+    left: 15px;
+    top: 50px;
+    transform: scale(0.9);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(11) {
+    z-index: 2;
+    left: -7px;
+    top: 40px;
+    transform: scale(1.1);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(12) {
+    left: 6px;
+    top: 60px;
+    transform: scale(0.8);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(13) {
+    left: 10px;
+    top: 75px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(14) {
+    left: 0;
+    top: 75px;
+    transform: scale(0.8);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(15) {
+    left: -15px;
+    top: 65px;
+    transform: scale(0.7);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(16) {
+    left: -22px;
+    top: 55px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(17) {
+    left: 5px;
+    top: 18px;
+    transform: scale(1.2) rotate(-40deg);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(18) {
+    left: 30px;
+    top: 10px;
+    transform: scale(1);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(19) {
+    left: 45px;
+    top: 18px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(20) {
+    left: 12px;
+    top: 38px;
+    transform: scale(0.5);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(21) {
+    left: 12px;
+    top: 0;
+    transform: scale(0.7) rotate(60deg);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(22) {
+    left: 25px;
+    top: -2px;
+    transform: scale(0.4) rotate(60deg);
+  }
+  .cherry-blossoms .cherry-blossom:nth-child(23) {
+    left: -20px;
+    top: 45px;
+    transform: scale(0.4) rotate(60deg);
+  }
+  .fruits {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -50%;
+    left: -50%;
+    z-index: 2;
+  }
+  .fruits .pear {
+    position: absolute;
+    width: 13px;
+    height: 15px;
+    background-color: #ffef94;
+    border-radius: 100%;
+    box-shadow: inset 2px 0 #fad500;
+    border: 0.003em solid black;
+  }
+  .fruits .pear:before,
+  .fruits .pear:after {
+    content: '';
+    position: absolute;
+  }
+  .fruits .pear:before {
+    width: 20px;
+    height: 20px;
+    background-color: #ffef94;
+    border-radius: 100%;
+    top: 6px;
+    border-right: 0.003em solid black;
+    box-shadow: inset 2px -2px #fad500, -0.06em 0.08em black;
+  }
+  .fruits .pear:after {
+    width: 5px;
+    height: 8px;
+    border-left: 2px solid #641b1b;
+    border-radius: 100%;
+    top: -7px;
+    left: 3px;
+  }
+}
